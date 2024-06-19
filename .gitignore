@@ -1,0 +1,5 @@
+# Image Files
+*.jpg
+
+# venv
+plant_id-env/
