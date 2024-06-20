@@ -4,7 +4,9 @@
 The goal of this project was to provide an application that was capable of identifying a variety of plant species specifically within Alberta due to the diverse ecosystem and to provide a better solution for replanting during things like construction.
 
 ### Solution
-Images were gathered from publically available sources from a variety of groups within this project. The images for the Canada Buffaloberry were collected using a python script utilizing an API that takes images in the public domain from [iNaturalist](https://www.inaturalist.org/) a source of peer-reviewed plant images. All the plant images were then manually labelled with plant names and bounding boxes by the groups that collected them. A YOLOv8 Object Detection model was trained, saved, and uploaded for access as a [Gradio App](https://kadenshubert-plant-id-demo.hf.space).
+Images were gathered from publically available sources from a variety of groups within this project. The images for the Canada Buffaloberry were collected using a python script utilizing an API that takes images in the public domain from [iNaturalist](https://www.inaturalist.org/) a source of peer-reviewed plant images. All the plant images were then manually labelled with plant names and bounding boxes by the groups that collected them. A YOLOv8 Object Detection model was trained, and integrated into a hosted Gradio demo.
+
+### [Gradio Demo](https://kadenshubert-plant-id-demo.hf.space)
 
 ## Model Training
 - Zip files: Zipped folders should be extracted in the repo location as named for the files to run properly.
@@ -13,8 +15,6 @@ Images were gathered from publically available sources from a variety of groups 
 - Image-Label_Formatting.ipynb: Processes the image & label files in the All_Plant_Data folder by adjusting mislabeled detections, removing images with missing label files, and formatting them into the proper structure for the YOLOv8 model.
 - Plant Identification.ipynb: Trains a YOLOv8 model for object detection using the plant image and label files.
 - plant-identification.yaml: Contains the data structure for YOLO and the class names used for object detection.
-
-### [Gradio Demo](https://kadenshubert-plant-id-demo.hf.space)
 
 ## Image_Collection Process
 #### Python scripts
